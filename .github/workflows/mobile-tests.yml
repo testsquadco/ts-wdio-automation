@@ -1,0 +1,73 @@
+name: Mobile Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        platform: [android, ios]
+        provider: [local, lambdatest, saucelabs]
+        exclude:
+          - provider: local
+            platform: ios
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: |
+        npm install
+        npm install -g appium@2.0.0
+        appium driver install xcuitest
+        appium driver install uiautomator2
+
+    - name: Start Appium Server
+      run: |
+        appium --allow-insecure chromedriver_autodownload &
+        sleep 10
+
+    - name: Run ${{ matrix.platform }} Tests
+      run: npm run test:${{ matrix.platform }}
+
+    - name: Run Cloud Tests
+      if: matrix.provider != 'local'
+      env:
+        LAMBDATEST_USERNAME: ${{ secrets.LAMBDATEST_USERNAME }}
+        LAMBDATEST_ACCESS_KEY: ${{ secrets.LAMBDATEST_ACCESS_KEY }}
+        SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+        SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+      run: |
+        if [ "${{ matrix.provider }}" = "lambdatest" ]; then
+          npm run test:lambdatest
+        elif [ "${{ matrix.provider }}" = "saucelabs" ]; then
+          npm run test:saucelabs
+        fi
+
+    - name: Generate Allure Report
+      if: always()
+      run: npm run report
+
+    - name: Upload Allure Report
+      if: always()
+      uses: actions/upload-artifact@v2
+      with:
+        name: allure-report-${{ matrix.platform }}
+        path: allure-report/
+
+    - name: Upload Screenshots
+      if: failure()
+      uses: actions/upload-artifact@v2
+      with:
+        name: screenshots-${{ matrix.platform }}
+        path: screenshots/ 

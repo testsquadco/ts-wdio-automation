@@ -1,0 +1,16 @@
+{
+    "testUsers": {
+        "validUser": {
+            "email": "test@qa.example.com",
+            "password": "qaTest123"
+        },
+        "invalidUser": {
+            "email": "invalid@qa.example.com",
+            "password": "wrong"
+        }
+    },
+    "testData": {
+        "searchTerm": "qa test product",
+        "category": "Electronics"
+    }
+} 

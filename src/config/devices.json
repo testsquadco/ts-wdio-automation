@@ -1,0 +1,30 @@
+{
+    "android": [
+        {
+            "name": "Samsung Galaxy S22",
+            "version": "12.0"
+        },
+        {
+            "name": "Google Pixel 6",
+            "version": "12.0"
+        },
+        {
+            "name": "OnePlus 9",
+            "version": "11.0"
+        }
+    ],
+    "ios": [
+        {
+            "name": "iPhone 13",
+            "version": "15.0"
+        },
+        {
+            "name": "iPhone 12",
+            "version": "14.5"
+        },
+        {
+            "name": "iPad Pro",
+            "version": "15.0"
+        }
+    ]
+} 

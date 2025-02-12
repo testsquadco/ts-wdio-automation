@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "types": [
+      "node",
+      "@wdio/globals/types",
+      "@wdio/mocha-framework",
+      "@wdio/appium-service",
+      "expect-webdriverio"
+    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  }
+} 

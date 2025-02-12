@@ -1,0 +1,16 @@
+{
+    "testUsers": {
+        "validUser": {
+            "email": "test@staging.example.com",
+            "password": "stagingTest123"
+        },
+        "invalidUser": {
+            "email": "invalid@staging.example.com",
+            "password": "wrong"
+        }
+    },
+    "testData": {
+        "searchTerm": "staging test product",
+        "category": "Electronics"
+    }
+} 

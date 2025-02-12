@@ -1,0 +1,24 @@
+mobile-test-automation/
+├── config/
+│   ├── wdio.android.conf.ts
+│   ├── wdio.ios.conf.ts
+│   └── wdio.shared.conf.ts
+├── src/
+│   ├── pages/
+│   │   └── base.page.ts
+│   ├── helpers/
+│   │   ├── gestures.helper.ts
+│   │   └── logger.helper.ts
+│   └── utils/
+│       ├── data.utils.ts
+│       └── device.utils.ts
+├── test/
+│   ├── specs/
+│   │   └── example.spec.ts
+│   ├── features/
+│   │   └── example.feature
+│   └── step-definitions/
+│       └── example.steps.ts
+├── .env.example
+├── package.json
+└── tsconfig.json 
