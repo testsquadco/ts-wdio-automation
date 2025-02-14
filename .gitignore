@@ -1,0 +1,59 @@
+node_modules
+package-lock.json
+allure-results/wdio-0-0-allure-reporter.log
+apps/app-release.apk
+node_modules/.package-lock.json
+test/.DS_Store
+.DS_Store
+# Node modules and dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# WebdriverIO logs and reports
+allure-results/
+allure-report/
+logs/
+*.log
+
+# Appium-related files
+*.apk
+*.app
+*.ipa
+
+# Build and compiled files
+dist/
+build/
+out/
+
+# Environment and configuration files
+.env
+*.local.js
+*.local.json
+
+# Mac system files
+.DS_Store
+
+# Visual snapshots (if using visual regression)
+*.png
+*.snap
+
+# IntelliJ / VSCode settings
+.idea/
+.vscode/
+
+# Temporary and cache files
+tmp/
+.cache/
+
+# Jest / Mocha Coverage
+coverage/
+
+# Reports
+target/
+test-results/
+
+# WebdriverIO service files
+wdio-*.json
+.wdio

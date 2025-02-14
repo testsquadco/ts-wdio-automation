@@ -1,18 +1,18 @@
 import { expect } from 'chai';
 import logger from '../../src/helpers/logger.helper';
 
-describe('Login Feature', () => {
-    before(() => {
-        logger.info('Starting Login Feature Test');
-    });
-
+describe('App Launch', () => {
     it('should launch the app successfully', async () => {
-        // Add a simple test to verify app launch
-        const appActivity = await browser.getCurrentActivity();
-        expect(appActivity).to.not.be.empty;
-    });
-
-    after(() => {
-        logger.info('Completed Login Feature Test');
+        logger.info('Starting App Launch Test');
+        
+        // Verify app is installed and running
+        const isAppLaunched = await browser.isAppInstalled(process.env.APP_PACKAGE || 'com.creditbookpk.creditbook');
+        expect(isAppLaunched).to.be.true;
+        
+        const currentActivity = await browser.getCurrentActivity();
+        logger.info(`Current Activity: ${currentActivity}`);
+        expect(currentActivity).to.not.be.empty;
+        
+        logger.info('App Launch Test Completed');
     });
 }); 
