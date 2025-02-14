@@ -3,7 +3,7 @@
     "target": "es2019",
     "types": [
       "node",
-      "@wdio/globals/types",
+      "@wdio/globals",
       "@wdio/mocha-framework",
       "@wdio/appium-service",
       "expect-webdriverio"

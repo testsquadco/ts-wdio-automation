@@ -11,6 +11,6 @@ export const config = deepmerge(sharedConfig, {
         'appium:autoGrantPermissions': true
     }],
     specs: [
-        './test/specs/**/*.android.ts'
+        ['./test/specs/**/*.android.ts', './test/specs/**/*.ts']
     ]
 }); 

@@ -1,5 +1,4 @@
 import type { Options } from '@wdio/types';
-import type { WebdriverIO } from '@wdio/globals';
 import dotenv from 'dotenv';
 import { EnvironmentUtils } from '../src/utils/environment.utils';
 
@@ -21,7 +20,7 @@ export const config: Options.Testrunner = {
         }
     },
     specs: [
-        './test/specs/**/*.ts'
+        './test/specs/**/*.android.ts'
     ],
     exclude: [],
     maxInstances: 10,
