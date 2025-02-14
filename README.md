@@ -1,13 +1,26 @@
-# WebDriverIO Mobile Test Automation Framework
+<p align="center">
+  <img src="https://staging.testsquad.co/wp-content/uploads/2025/02/testsquad-logo-500-469x100.png" width="400"/>
+</p>
 
-A mobile test automation framework built with WebdriverIO and Appium for Android and iOS app testing.
+# TestSquad WebDriverIO Mobile Test Automation Framework (Boiler-plate)
+
+## About TestSquad
+
+TestSquad is a software testing company specializing in manual and automated testing solutions, ensuring high-quality software for global clients. We provide expert QA services, including mobile automation, to enhance product reliability and performance.
+
+📩 Contact us: info@testsquad.co | 🌐 Website: https://testsquad.co
+
+---
+
+## Overview
+
+A mobile test automation framework built with WebdriverIO and Appium for Android app testing.
 
 ## Prerequisites
 
 - Node.js (v14 or higher)
 - Java JDK (v8 or higher)
 - Android SDK (for Android testing)
-- Xcode (for iOS testing, Mac only)
 - Appium 2.0
 - Android Emulator or real device
 
@@ -132,10 +145,10 @@ Common issues and solutions:
 3. Commit your changes
 4. Push to the branch
 5. Create a Pull Request
+6. Mention TestSquad on LinkedIn :)
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-
-
+<p align="center">Powered by <a href="https://testsquad.co">TestSquad</a> - Your Quality Assurance Partner</p> 
